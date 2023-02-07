@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background: #f2f2f2;
+  overflow-x: hidden;
+}
+
+/* The side navigation menu */
+.sidenav {
+  overflow: hidden;
+  height: 50%;
+  width: 0;
+   position: fixed;
+  z-index: 1;
+  top: 0;
+  background-color: #f2f2f2;
+  overflow-x: hidden;
+  transition: 0.5s;
+  text-align: center;
+  user-select: none;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #f2f2f2;
+  display: block;
+  transition: all 0.5s ease;
+}
+.sidenav a:hover {
+  transform: scale(1.2);
+}
+
+/* When you mouse over the navigation links, change their color */
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 5%;
+  right: 25px;
+  font-size: 3em;
+  margin-left: 50px;
+}
+
+.home-section {
+  width: 100%;
+  height: auto;
+  background-size: cover !important;
+  object-fit: fill;
+  background-blend-mode: darken;
+}
+
+header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerDiv {
+  width: 100%;
+  height: 5em;
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  user-select: none;
+}
+
+.sideOpenDiv {
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.sideOpenDiv i {
+  font-size: 3em;
+   color: rgb(14,57,151);
+  cursor: pointer;
+  display: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  width: 60%;
+  height: auto;
+  height: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: none;
+}
+
+.logoDiv {
+  display: flex;
+  width: 15%;
+  justify-content: center;
+  height: auto;
+  height: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  color: rgb(14,57,151);
+}
+.second_nav{
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+.second_nav button {
+  width: 6em;
+  height: 2.2em;
+  font-size: 1em;
+  color: rgb(14,57,151);
+  padding: .2em;
+  border: 1px solid rgb(14,57,151);
+  cursor: pointer;
+  border-radius: .5em;
+  transition: all .3s ease;
+}
+
+.second_nav .bgNavy {
+  background-color: rgb(14,57,151);
+  color: #f2f2f2;
+}
+.second_nav {
+  display: flex;
+  width: auto;
+  flex-direction: row;
+}
+.second_nav  .bgNavy {
+    background-color:rgb(14,57,151);
+    color: #f2f2f2;
+}
+.second_nav {
+    display: flex;
+    width: auto;
+    flex-direction: row;
+}
+.second_nav  button:hover {
+    transform: scale(1.05);
+}
+.navbar{
+  position: absolute;
+  top: 1vw;
+  left: 0;
+  display: flex;
+  width: 95%;
+  font-size: 4vh;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  justify-content: space-between;
+  justify-content: flex-end;
+}
+.navbar a {
+  color: rgb(14,57,151);
+  text-align: center;
+  padding: 10px 5px;
+  text-decoration: none;
+  justify-content: center;
+}
+.navbar a.active {
+  background-color: rgb(14,57,151);
+  color: white;
+  border-radius: 10px;
+}
+
+
+
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+.container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+ 
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 850px) {
+  body{
+    overflow-x:none;
+  }
+  .sidenav {
+    overflow: hidden;
+    height: auto;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0%;
+    background-color:  rgb(56, 94, 177);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    overflow-x: hidden;
+    transition: 0.5s;
+    text-align: center;
+    padding-top: 19%;
+    user-select: none;
+  }
+  .sidenav a {
+    line-height: 1em;
+  }
+  .headerDiv {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .sideOpenDiv {
+    width: auto;
+  }
+  .sideOpenDiv i {
+    font-size: 2em;
+  }
+  .logoDiv {
+    width: 50%;
+    height: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    justify-content: center;
+  }
+  .sideOpenDiv i {
+    display: block;
+    width: 400%;
+  }
+  .second_nav{
+    display: none;
+  }
+  .headerDiv {
+    width: 100%;
+    height: 5em;
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    user-select: none;
+  }
+  .bgNavyy {
+    width: 6em;
+    height: 2em;
+    font-size: 1em;
+    color: rgb(14,57,151);
+    padding: .2em;
+    border: 1px solid rgb(14,57,151);
+    cursor: pointer;
+    border-radius: .5em;
+    transition: all .3s ease;
+  }
+  
+  .bgNavyy {
+    background-color: rgb(14,57,151);
+    color: #f2f2f2;
+  }
+  .bgNavyy {
+      background-color:rgb(14,57,151);
+      color: #f2f2f2;
+  }
+  .bgNavyy:hover {
+      transform: scale(1.05);
+  }
+
+
+}

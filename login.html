@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NIIT Abeokuta Web App</title>
+    <link rel="stylesheet" href="/NIITABEOKUTA/CSS/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="login.css">
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/NIITABEOKUTA/Images/niit-logo.png"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div id="mySidenav" class="sidenav">
+     
+      <div class="first_nav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <a href="#home" class="active">Home</a>
+              <a href="#news">Courses</a>
+              <a href="#contact">About</a>
+              <a href="#about">Contact</a>
+              <a href=""><button class="bgNavyy">Login</button></a>
+              <a href=""><button class="bgNavyy">Register</button></a>
+               
+      </div>
+    </div>
+
+   
+    <!-------------- GENERAL CONTAINER BEGINS ------------>
+    <div class="container">
+      <!------------------- HOME SECTION ------------------------->
+      <div class="home-section" data-aos="fade-down"
+    data-aos-easing="linear"
+      data-aos-duration="4000">
+        <header>
+          <div class="headerDiv">
+            <div class="logoDiv">
+              <img src="logo.png" alt="">
+            </div>
+            <div class="sideOpenDiv">
+              <i onclick="openNav()" class="fas fa-bars"></i>
+            </div>
+          </div>
+        </header>
+       
+        <div class="second_nav">
+          <nav class="navbar">
+            <ul class="nav-link">
+              <a href="#home" class="active">Home</a>
+              <a href="#news">Courses</a>
+              <a href="#contact">About</a>
+              <a href="#about">Contact</a>
+              <a href=""><button>Login</button></a>
+              <a href=""><button class="bgNavy">Register</button></a>
+               
+              </ul>
+        </nav>
+        </div>
+      
+      </div>
+
+     
+      
+      <!------------------ HOME SECTION ENDS ------------------------>
+       <div>
+          <!-- this is where you can start writing your own code -->
+
+      </div>
+
+
+    </div>
+    <!------------- GENERAL CONTAINER ENDS ----------------->
+    <!-- <script src="/NIITABEOKUTA/JavaScript/script.js"></script> -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      "use strict";
+      AOS.init();
+      /* Set the width of the side navigation to 250px */
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+      }
+
+      /* Set the width of the side navigation to 0 */
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+      let slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 4000); // Change image every 2 seconds
+      }
+    </script>
+  </body>
+</html>
